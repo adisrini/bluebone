@@ -22,6 +22,9 @@
 		0B3AA3B71E1EC5C500577DEA /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3AA3B61E1EC5C500577DEA /* NVActivityIndicatorView.framework */; };
 		0B3AA3B81E1EC83A00577DEA /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3AA3B61E1EC5C500577DEA /* NVActivityIndicatorView.framework */; };
 		0B3AA3B91E1EC83A00577DEA /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3AA3B61E1EC5C500577DEA /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B3AA3BC1E1ED2D400577DEA /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3AA3BB1E1ED2D400577DEA /* SwiftMessages.framework */; };
+		0B3AA3BD1E1ED2DE00577DEA /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3AA3BB1E1ED2D400577DEA /* SwiftMessages.framework */; };
+		0B3AA3BE1E1ED2DE00577DEA /* SwiftMessages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3AA3BB1E1ED2D400577DEA /* SwiftMessages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B4021E21E0FFCDD00C7E4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4021E11E0FFCDD00C7E4CB /* AppDelegate.swift */; };
 		0B4021E91E0FFCDD00C7E4CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4021E71E0FFCDD00C7E4CB /* Main.storyboard */; };
 		0B4021EB1E0FFCDD00C7E4CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4021EA1E0FFCDD00C7E4CB /* Assets.xcassets */; };
@@ -59,6 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0B3AA3BE1E1ED2DE00577DEA /* SwiftMessages.framework in Embed Frameworks */,
 				0B3AA3B91E1EC83A00577DEA /* NVActivityIndicatorView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -80,6 +84,7 @@
 		0B3AA3B21E1EBD6700577DEA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0B3AA3B41E1EBD7400577DEA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0B3AA3B61E1EC5C500577DEA /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		0B3AA3BB1E1ED2D400577DEA /* SwiftMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMessages.framework; path = Carthage/Build/iOS/SwiftMessages.framework; sourceTree = "<group>"; };
 		0B4021DE1E0FFCDD00C7E4CB /* bluebone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bluebone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4021E11E0FFCDD00C7E4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B4021E81E0FFCDD00C7E4CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,9 +117,11 @@
 				0B3AA3AC1E1EBD5B00577DEA /* CoreGraphics.framework in Frameworks */,
 				0B3AA3AD1E1EBD5B00577DEA /* CoreLocation.framework in Frameworks */,
 				0B3AA3AE1E1EBD5B00577DEA /* QuartzCore.framework in Frameworks */,
+				0B3AA3BD1E1ED2DE00577DEA /* SwiftMessages.framework in Frameworks */,
 				0B3AA3B81E1EC83A00577DEA /* NVActivityIndicatorView.framework in Frameworks */,
 				0B3AA3AF1E1EBD5B00577DEA /* Security.framework in Frameworks */,
 				0B3AA3B01E1EBD5B00577DEA /* StoreKit.framework in Frameworks */,
+				0B3AA3BC1E1ED2D400577DEA /* SwiftMessages.framework in Frameworks */,
 				0B3AA3B11E1EBD5B00577DEA /* SystemConfiguration.framework in Frameworks */,
 				0B3AA3A01E1EBCCB00577DEA /* Parse.framework in Frameworks */,
 				0B3AA39F1E1EBCCB00577DEA /* Bolts.framework in Frameworks */,
@@ -141,6 +148,7 @@
 		0B3AA3A11E1EBD5B00577DEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B3AA3BB1E1ED2D400577DEA /* SwiftMessages.framework */,
 				0B3AA39D1E1EBCCB00577DEA /* Bolts.framework */,
 				0B3AA39E1E1EBCCB00577DEA /* Parse.framework */,
 				0B3AA3B61E1EC5C500577DEA /* NVActivityIndicatorView.framework */,

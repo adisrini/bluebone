@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import NVActivityIndicatorView
+import SwiftMessages
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -22,11 +23,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         activityIndicator.type = NVActivityIndicatorType.ballScaleMultiple
         self.view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        displayError(title: "Error", message: "That user does not exist!")
     }
     
     func initializeView() {
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
+    }
+    
+    func displayError(title: String, message: String) {
+        // Instantiate a message view from the provided card view layout. SwiftMessages searches for nib
+        // files in the main bundle first, so you can easily copy them into your project and make changes.
+        let view = MessageView.viewFromNib(layout: .CardView)
+        
+        // Theme message elements with the warning style.
+        view.configureTheme(.error)
+        
+        // Add a drop shadow.
+        view.configureDropShadow()
+        
+        // Set message title, body, and button text.
+        view.configureContent(title: title, body: message)
+        view.button?.setTitle("OK", for: .normal)
+        
+        // Show the message.
+        SwiftMessages.show(view: view)
     }
     
     override func viewDidLoad() {
