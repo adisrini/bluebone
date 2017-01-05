@@ -25,7 +25,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         activityIndicator.startAnimating()
         UIApplication.shared.beginIgnoringInteractionEvents()
         
-        displayError(title: "Error", message: "That user does not exist!")
+        var errorMessage = "Please try again later."
+        
+        PFUser.logInWithUsername(inBackground: usernameTextField.text!, password: passwordTextField.text!) { (user, error) in
+            activityIndicator.stopAnimating()
+            UIApplication.shared.endIgnoringInteractionEvents()
+            
+            if let error = error {
+                // Login failure.
+                if let errorString = (error as NSError).userInfo["error"] as? String {
+                    errorMessage = errorString
+                }
+                self.displayError(title: "Error!", message: errorMessage)
+            } else {
+                // Logged in successfully.
+                
+            }
+        }
     }
     
     func initializeView() {
