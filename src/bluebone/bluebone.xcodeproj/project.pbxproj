@@ -25,6 +25,8 @@
 		0B3AA3BC1E1ED2D400577DEA /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3AA3BB1E1ED2D400577DEA /* SwiftMessages.framework */; };
 		0B3AA3BD1E1ED2DE00577DEA /* SwiftMessages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3AA3BB1E1ED2D400577DEA /* SwiftMessages.framework */; };
 		0B3AA3BE1E1ED2DE00577DEA /* SwiftMessages.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B3AA3BB1E1ED2D400577DEA /* SwiftMessages.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B3AA3C01E1EDBEA00577DEA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AA3BF1E1EDBEA00577DEA /* TabBarController.swift */; };
+		0B3AA3C21E1EDC3200577DEA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AA3C11E1EDC3200577DEA /* HistoryViewController.swift */; };
 		0B4021E21E0FFCDD00C7E4CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4021E11E0FFCDD00C7E4CB /* AppDelegate.swift */; };
 		0B4021E91E0FFCDD00C7E4CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4021E71E0FFCDD00C7E4CB /* Main.storyboard */; };
 		0B4021EB1E0FFCDD00C7E4CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4021EA1E0FFCDD00C7E4CB /* Assets.xcassets */; };
@@ -35,7 +37,6 @@
 		0B4022151E0FFE3F00C7E4CB /* logo2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4022121E0FFE3F00C7E4CB /* logo2x.png */; };
 		0B4022161E0FFE3F00C7E4CB /* logo3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4022131E0FFE3F00C7E4CB /* logo3x.png */; };
 		0B40221D1E10053C00C7E4CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40221C1E10053C00C7E4CB /* LoginViewController.swift */; };
-		0B4022221E101B6400C7E4CB /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4022211E101B6400C7E4CB /* profile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		0B3AA3B41E1EBD7400577DEA /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		0B3AA3B61E1EC5C500577DEA /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		0B3AA3BB1E1ED2D400577DEA /* SwiftMessages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMessages.framework; path = Carthage/Build/iOS/SwiftMessages.framework; sourceTree = "<group>"; };
+		0B3AA3BF1E1EDBEA00577DEA /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		0B3AA3C11E1EDC3200577DEA /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		0B4021DE1E0FFCDD00C7E4CB /* bluebone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bluebone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4021E11E0FFCDD00C7E4CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B4021E81E0FFCDD00C7E4CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,7 +104,6 @@
 		0B4022121E0FFE3F00C7E4CB /* logo2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2x.png; path = ../../../assets/logo2x.png; sourceTree = "<group>"; };
 		0B4022131E0FFE3F00C7E4CB /* logo3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo3x.png; path = ../../../assets/logo3x.png; sourceTree = "<group>"; };
 		0B40221C1E10053C00C7E4CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		0B4022211E101B6400C7E4CB /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = ../../../assets/profile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +224,6 @@
 		0B4022181E0FFF0600C7E4CB /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				0B4022231E101B6900C7E4CB /* tab */,
 				0B4022191E0FFF0F00C7E4CB /* logo */,
 			);
 			name = assets;
@@ -242,16 +243,10 @@
 			isa = PBXGroup;
 			children = (
 				0B40221C1E10053C00C7E4CB /* LoginViewController.swift */,
+				0B3AA3BF1E1EDBEA00577DEA /* TabBarController.swift */,
+				0B3AA3C11E1EDC3200577DEA /* HistoryViewController.swift */,
 			);
 			name = controllers;
-			sourceTree = "<group>";
-		};
-		0B4022231E101B6900C7E4CB /* tab */ = {
-			isa = PBXGroup;
-			children = (
-				0B4022211E101B6400C7E4CB /* profile.png */,
-			);
-			name = tab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,7 +363,6 @@
 				0B4021EB1E0FFCDD00C7E4CB /* Assets.xcassets in Resources */,
 				0B4022161E0FFE3F00C7E4CB /* logo3x.png in Resources */,
 				0B4021E91E0FFCDD00C7E4CB /* Main.storyboard in Resources */,
-				0B4022221E101B6400C7E4CB /* profile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +387,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B3AA3C01E1EDBEA00577DEA /* TabBarController.swift in Sources */,
 				0B40221D1E10053C00C7E4CB /* LoginViewController.swift in Sources */,
 				0B4021E21E0FFCDD00C7E4CB /* AppDelegate.swift in Sources */,
+				0B3AA3C21E1EDC3200577DEA /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,7 +3,7 @@
 //  bluebone
 //
 //  Created by Aditya Srinivasan on 25/12/16.
-//  Copyright © 2016 Aditya Srinivasan. All rights reserved.
+//  Copyright © 2017 Aditya Srinivasan. All rights reserved.
 //
 
 import UIKit
@@ -39,17 +39,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.displayError(title: "Error!", message: errorMessage)
             } else {
                 // Logged in successfully.
-                
+                self.performSegue(withIdentifier: "login", sender: self)
             }
         }
     }
     
-    func initializeView() {
+    private func initializeView() {
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
     }
     
-    func displayError(title: String, message: String) {
+    private func displayError(title: String, message: String) {
         // Instantiate a message view from the provided card view layout. SwiftMessages searches for nib
         // files in the main bundle first, so you can easily copy them into your project and make changes.
         let view = MessageView.viewFromNib(layout: .CardView)
@@ -72,7 +72,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         initializeView()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil {
+            self.performSegue(withIdentifier: "login", sender: self)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
