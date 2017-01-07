@@ -37,6 +37,12 @@
 		0B4022151E0FFE3F00C7E4CB /* logo2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4022121E0FFE3F00C7E4CB /* logo2x.png */; };
 		0B4022161E0FFE3F00C7E4CB /* logo3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4022131E0FFE3F00C7E4CB /* logo3x.png */; };
 		0B40221D1E10053C00C7E4CB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40221C1E10053C00C7E4CB /* LoginViewController.swift */; };
+		0B71F75F1E20343D00CC3DB2 /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B71F75E1E20343D00CC3DB2 /* Interest.swift */; };
+		0B71F7621E20371100CC3DB2 /* InterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B71F7611E20371100CC3DB2 /* InterestCollectionViewCell.swift */; };
+		0BA872921E212BD700DDD590 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA872911E212BD700DDD590 /* Log.swift */; };
+		0BA872941E212C1D00DDD590 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA872931E212C1D00DDD590 /* Mood.swift */; };
+		0BA872961E212D2800DDD590 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA872951E212D2800DDD590 /* Activity.swift */; };
+		0BA872981E2131F400DDD590 /* LogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA872971E2131F400DDD590 /* LogCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +110,12 @@
 		0B4022121E0FFE3F00C7E4CB /* logo2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo2x.png; path = ../../../assets/logo2x.png; sourceTree = "<group>"; };
 		0B4022131E0FFE3F00C7E4CB /* logo3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo3x.png; path = ../../../assets/logo3x.png; sourceTree = "<group>"; };
 		0B40221C1E10053C00C7E4CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0B71F75E1E20343D00CC3DB2 /* Interest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		0B71F7611E20371100CC3DB2 /* InterestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewCell.swift; sourceTree = "<group>"; };
+		0BA872911E212BD700DDD590 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		0BA872931E212C1D00DDD590 /* Mood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		0BA872951E212D2800DDD590 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		0BA872971E2131F400DDD590 /* LogCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +204,8 @@
 		0B4021E01E0FFCDD00C7E4CB /* bluebone */ = {
 			isa = PBXGroup;
 			children = (
-				0B40221E1E10054100C7E4CB /* controllers */,
+				0B71F7601E2035E500CC3DB2 /* model */,
+				0B40221E1E10054100C7E4CB /* controller */,
 				0B4022181E0FFF0600C7E4CB /* assets */,
 				0B4021E11E0FFCDD00C7E4CB /* AppDelegate.swift */,
 				0B4021E71E0FFCDD00C7E4CB /* Main.storyboard */,
@@ -239,14 +252,27 @@
 			name = logo;
 			sourceTree = "<group>";
 		};
-		0B40221E1E10054100C7E4CB /* controllers */ = {
+		0B40221E1E10054100C7E4CB /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				0B40221C1E10053C00C7E4CB /* LoginViewController.swift */,
 				0B3AA3BF1E1EDBEA00577DEA /* TabBarController.swift */,
 				0B3AA3C11E1EDC3200577DEA /* HistoryViewController.swift */,
+				0B71F7611E20371100CC3DB2 /* InterestCollectionViewCell.swift */,
+				0BA872971E2131F400DDD590 /* LogCollectionViewCell.swift */,
 			);
-			name = controllers;
+			name = controller;
+			sourceTree = "<group>";
+		};
+		0B71F7601E2035E500CC3DB2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0B71F75E1E20343D00CC3DB2 /* Interest.swift */,
+				0BA872911E212BD700DDD590 /* Log.swift */,
+				0BA872931E212C1D00DDD590 /* Mood.swift */,
+				0BA872951E212D2800DDD590 /* Activity.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +300,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B40220B1E0FFCDE00C7E4CB /* Build configuration list for PBXNativeTarget "blueboneTests" */;
 			buildPhases = (
+				CC3ABE997851B350077F93A1 /* [CP] Check Pods Manifest.lock */,
 				0B4021F01E0FFCDE00C7E4CB /* Sources */,
 				0B4021F11E0FFCDE00C7E4CB /* Frameworks */,
 				0B4021F21E0FFCDE00C7E4CB /* Resources */,
+				F74C19F8C43E4AA5054A7BFC /* [CP] Embed Pods Frameworks */,
+				5549026B181E602679F40C3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,9 +321,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B40220E1E0FFCDE00C7E4CB /* Build configuration list for PBXNativeTarget "blueboneUITests" */;
 			buildPhases = (
+				BCC4AD1ADDA4DC0E574DB0F5 /* [CP] Check Pods Manifest.lock */,
 				0B4021FB1E0FFCDE00C7E4CB /* Sources */,
 				0B4021FC1E0FFCDE00C7E4CB /* Frameworks */,
 				0B4021FD1E0FFCDE00C7E4CB /* Resources */,
+				3F19C728BFDEA2E795A3909E /* [CP] Embed Pods Frameworks */,
+				8921FC030D62C9B14301E094 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -382,15 +414,114 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F19C728BFDEA2E795A3909E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blueboneUITests/Pods-blueboneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5549026B181E602679F40C3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blueboneTests/Pods-blueboneTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8921FC030D62C9B14301E094 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blueboneUITests/Pods-blueboneUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCC4AD1ADDA4DC0E574DB0F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC3ABE997851B350077F93A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F74C19F8C43E4AA5054A7BFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blueboneTests/Pods-blueboneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B4021DA1E0FFCDD00C7E4CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B71F7621E20371100CC3DB2 /* InterestCollectionViewCell.swift in Sources */,
+				0BA872921E212BD700DDD590 /* Log.swift in Sources */,
 				0B3AA3C01E1EDBEA00577DEA /* TabBarController.swift in Sources */,
+				0BA872981E2131F400DDD590 /* LogCollectionViewCell.swift in Sources */,
 				0B40221D1E10053C00C7E4CB /* LoginViewController.swift in Sources */,
+				0BA872941E212C1D00DDD590 /* Mood.swift in Sources */,
 				0B4021E21E0FFCDD00C7E4CB /* AppDelegate.swift in Sources */,
+				0BA872961E212D2800DDD590 /* Activity.swift in Sources */,
 				0B3AA3C21E1EDC3200577DEA /* HistoryViewController.swift in Sources */,
+				0B71F75F1E20343D00CC3DB2 /* Interest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

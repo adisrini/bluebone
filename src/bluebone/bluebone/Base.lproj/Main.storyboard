@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YEl-mH-SqD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -130,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="-762.5" y="-0.5"/>
         </scene>
-        <!--Item 2-->
+        <!--Profile-->
         <scene sceneID="aQ3-Kg-hPI">
             <objects>
-                <viewController id="1WT-9W-xnO" sceneMemberID="viewController">
+                <viewController title="Profile" id="1WT-9W-xnO" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wto-mz-kBX"/>
                         <viewControllerLayoutGuide type="bottom" id="JWJ-K7-Orc"/>
@@ -141,7 +141,7 @@
                     <view key="view" contentMode="scaleToFill" id="EWN-ro-Gag">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="mOW-le-QoI"/>
                 </viewController>
@@ -149,10 +149,10 @@
             </objects>
             <point key="canvasLocation" x="1079" y="335"/>
         </scene>
-        <!--Item 1-->
+        <!--History-->
         <scene sceneID="0DA-T4-S6M">
             <objects>
-                <viewController id="kyv-IP-b9M" sceneMemberID="viewController">
+                <viewController title="History" id="kyv-IP-b9M" customClass="HistoryViewController" customModule="bluebone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="twQ-Qt-gIg"/>
                         <viewControllerLayoutGuide type="bottom" id="W0F-VD-f8u"/>
@@ -160,13 +160,89 @@
                     <view key="view" contentMode="scaleToFill" id="D2k-Re-Tjo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A1R-fP-dZH">
+                                <rect key="frame" x="0.0" y="107" width="375" height="452"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="thf-Jr-oRr">
+                                    <size key="itemSize" width="280" height="380"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Log Cell" id="Cc6-sd-FJk" customClass="LogCollectionViewCell" customModule="bluebone" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="36" width="280" height="380"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="380"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLd-8f-vT9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="380"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSe-GR-w9w">
+                                                            <rect key="frame" x="119" y="74" width="42" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="42" id="T73-sS-OR5"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-2H-UCp">
+                                                            <rect key="frame" x="119" y="263" width="42" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="42" id="Isi-tD-iYV"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="WZo-2H-UCp" firstAttribute="centerX" secondItem="GLd-8f-vT9" secondAttribute="centerX" id="0yc-3D-ZhZ"/>
+                                                        <constraint firstItem="WZo-2H-UCp" firstAttribute="top" secondItem="JSe-GR-w9w" secondAttribute="bottom" constant="168" id="MzW-qz-9AI"/>
+                                                        <constraint firstItem="WZo-2H-UCp" firstAttribute="leading" secondItem="GLd-8f-vT9" secondAttribute="leading" constant="119" id="VgJ-2A-fDA"/>
+                                                        <constraint firstItem="JSe-GR-w9w" firstAttribute="top" secondItem="GLd-8f-vT9" secondAttribute="top" constant="74" id="Xou-sU-x7l"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JSe-GR-w9w" secondAttribute="trailing" constant="119" id="cch-lM-j38"/>
+                                                        <constraint firstItem="JSe-GR-w9w" firstAttribute="leading" secondItem="GLd-8f-vT9" secondAttribute="leading" constant="119" id="r18-5T-f5D"/>
+                                                        <constraint firstAttribute="trailing" secondItem="WZo-2H-UCp" secondAttribute="trailing" constant="119" id="tEX-2I-7da"/>
+                                                        <constraint firstItem="JSe-GR-w9w" firstAttribute="centerX" secondItem="GLd-8f-vT9" secondAttribute="centerX" id="wq3-Mc-NvM"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="GLd-8f-vT9" firstAttribute="leading" secondItem="Cc6-sd-FJk" secondAttribute="leading" id="04f-fT-djg"/>
+                                            <constraint firstAttribute="trailing" secondItem="GLd-8f-vT9" secondAttribute="trailing" id="AcC-6h-FPP"/>
+                                            <constraint firstAttribute="bottom" secondItem="GLd-8f-vT9" secondAttribute="bottom" id="RaZ-QZ-H58"/>
+                                            <constraint firstItem="GLd-8f-vT9" firstAttribute="top" secondItem="Cc6-sd-FJk" secondAttribute="top" id="vHj-TP-AS4"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="logDateLabel" destination="JSe-GR-w9w" id="1fv-TF-OEJ"/>
+                                            <outlet property="logMoodLabel" destination="WZo-2H-UCp" id="j99-aT-yi5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="kyv-IP-b9M" id="ICi-Ba-sr1"/>
+                                    <outlet property="delegate" destination="kyv-IP-b9M" id="Rz6-Jh-dq1"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="sSN-uD-BJS"/>
+                    <connections>
+                        <outlet property="collectionView" destination="A1R-fP-dZH" id="ED4-sJ-NP6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aW6-hz-eb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079" y="-345"/>
+            <point key="canvasLocation" x="1077.5999999999999" y="-345.87706146926541"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fpq-tj-lvP">

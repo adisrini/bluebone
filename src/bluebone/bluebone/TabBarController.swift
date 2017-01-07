@@ -14,15 +14,14 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        let historyViewController = HistoryViewController()
+        let historyViewController = viewControllers![0]
         historyViewController.tabBarItem.title = "History"
         historyViewController.tabBarItem.image = #imageLiteral(resourceName: "time")
         
-        let viewController = UIViewController()
+        let viewController = viewControllers![1]
         viewController.tabBarItem.title = "Profile"
         viewController.tabBarItem.image = #imageLiteral(resourceName: "profile")
         
-        viewControllers = [historyViewController, viewController]
     }
 
     override func didReceiveMemoryWarning() {
